@@ -11,7 +11,11 @@ class Exercise
     params = {:father => person1, :mother => person2, :child => person3}
     puts(params[:father][:first])
   end
-
+  
+  def merge_exercise
+    puts({ "a" => 100, "b" => 200 }.merge({ "b" => 300 }))
+  end
+  
 end
 
 class String
