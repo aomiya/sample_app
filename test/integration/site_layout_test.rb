@@ -9,4 +9,9 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", about_path
     assert_select "a[href=?]", contact_path
   end
+  test "should get signup" do
+    get :signup
+    assert_response :success
+    assert_select "title", "Sign up | Ruby on Rails Tutorial Sample App"
+  end
 end
